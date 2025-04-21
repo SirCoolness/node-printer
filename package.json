@@ -1,7 +1,7 @@
 {
-  "name": "printer",
+  "name": "@amberlogicgroup/printer",
   "description": "Node.js printer bindings",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "homepage": "https://github.com/tojocky/node-printer",
   "author": {
     "name": "Ion Lupascu",
@@ -28,8 +28,10 @@
   "scripts": {
     "install": "prebuild-install || node-gyp rebuild",
     "prebuild": "prebuild --all --force --strip --verbose",
+    "prebuild:small": "prebuild -t 22.12.0 --force --strip --verbose",
     "rebuild": "node-gyp rebuild",
-    "test": "nodeunit test"
+    "test": "nodeunit test",
+    "prebuild:electron": "prebuild -t 30.0.6 -r electron --force --strip --verbose"
   },
   "binary": {
     "module_name": "node_printer",
