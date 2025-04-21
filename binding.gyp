@@ -1,5 +1,6 @@
 {
   "variables": {
+    'openssl_fips': '',
     "module_name%": "node_printer",
     "module_path%": "lib"
   },
